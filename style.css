@@ -1,0 +1,133 @@
+/* D.R.Y. CSS Code Comments */
+
+/* Reset all margins, paddings, and box sizing to ensure consistent layout across elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the font-family and background color for the entire body */
+body {
+    font-family: "Varela Round", "sans-serif";
+    background-color: #151360;
+}
+
+/* Styling for the main form container */
+.form {
+    /* Create a gradient background using three colors */
+    background-image: linear-gradient(#ff1395, #0145ff, #7d4cbd);
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 16px;
+    padding: 120px 50px;
+    box-shadow: 2px 2px 8px #000000ab;
+}
+
+/* Create an image overlay for the form background */
+.img-overlay::before {
+    content: "";
+    background-image: url(https://i.ytimg.com/vi/xnTGbgx7Ohw/maxresdefault.jpg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.04;
+    width: 400px;
+    height: 600px;
+    border-radius: 16px;
+    z-index: -1;
+}
+
+/* Styling for the close icon on the form */
+.icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+/* Hover effect for the close icon */
+.icon:hover {
+    color: rgba(255, 255, 255, 0.699);
+    font-size: large;
+    transform: scale(1.5);
+    transition: 0.14s ease-in-out;
+}
+
+/* Styling for the form header */
+.form h1 {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 2rem; /* 1rem is 16px */
+}
+
+/* Styling for the form input fields container */
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 0.7rem;
+    border-bottom: 1px solid rgba(231, 231, 231, 0.8);
+}
+
+/* Hover effect for the form input fields container */
+.inputs:hover {
+    border-bottom: 3px solid #fff;
+    transition: 0.2s ease-in-out;
+}
+
+/* Styling for the input fields and their placeholders */
+#name,
+#email,
+#password,
+#name::placeholder,
+#email::placeholder,
+#password::placeholder {
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    padding-bottom: 0.5;
+}
+
+/* Styling for the button */
+.button {
+    width: 100%;
+    background: white;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 14px;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #0145ff;
+    outline: none;
+}
+
+/* Hover effect for the button */
+.button:hover {
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+/* Styling for paragraphs within the form */
+p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+}
